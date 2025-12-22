@@ -4,8 +4,17 @@ const UserSchema = new mongoose.Schema({
     email : String,
     password : String,
 })
+const BlogSchema = new mongoose.Schema({
+    title : String,
+    image : String,
+    content : String,
+    author : String,    
+})
 const UserModel = mongoose.model("user",UserSchema)
+const BlogModel = mongoose.model("blogs",BlogSchema)
+
 
 module.exports = {
-    UserModel
+    UserModel,
+    BlogModel
 }
